@@ -15,6 +15,6 @@ wp-content/themes/*
 sitemap.xml
 sitemap.xml.gz
 
-# no need for these  #
+# no need for these #
 .DS_Store
 .htaccess
