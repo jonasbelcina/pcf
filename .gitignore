@@ -1,4 +1,6 @@
-
+wp-config.php
+wp-admin/*
+wp-includes/*
 
 # Ignore everything in the "wp-content" directory, except the "plugins" and "themes" directories.
 wp-content/*
@@ -7,7 +9,7 @@ wp-content/*
 
 # Ignore everything in the "themes" directory, except the themes you specify
 wp-content/themes/*
-!wp-content/themes/pcf/
+!wp-content/themes/palmonade/
 
 # sitemaps not needed locally #
 sitemap.xml
