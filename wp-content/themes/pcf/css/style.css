@@ -2597,7 +2597,7 @@ button.alm-load-more-btn:focus {
 
 .kitchen-details-banner {
 	/*height: calc(100vh - 135px);*/
-	height: 400px;
+	height: 500px;
 	overflow: hidden;
 	position: relative;
 	margin-bottom: 50px;
@@ -2624,8 +2624,10 @@ button.alm-load-more-btn:focus {
 
 	.kitchen-details-banner img {
 		height: 100%;
-		width: 100%;
-		object-fit: cover;
+		max-width: 100%;
+		width: auto !important;
+		margin: 0 auto;
+		/*object-fit: cover;*/
 	}
 
 	.kitchen-details-banner .banner-caption {
@@ -2641,6 +2643,11 @@ button.alm-load-more-btn:focus {
 	.kitchen-details-gallery .owl-item {
 		height: 100%;
 	}
+
+		.kitchen-details-gallery {
+			max-width: 800px;
+			margin: 0 auto;
+		}
 
 		.kitchen-details-gallery .owl-controls {
 			position: absolute;
