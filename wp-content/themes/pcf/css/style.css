@@ -1701,6 +1701,59 @@ footer {
 			color: #d8d8d8;
 		}
 
+		.cd-top {
+		    width: 60px;
+		    height: 60px;
+		    display: block;
+		    position: fixed;
+		    bottom: 20px;
+		    right: 20px;
+		    background: #c0a06e;
+		    border-radius: 4px;
+		    opacity: 0.5;
+		    border-radius: 50%;
+		    text-align: center;
+		    visibility: hidden;
+		}
+
+		.cd-top:hover {
+		    opacity: 1 !important;
+		}
+
+		.cd-top span {
+		    color: #fff;
+		    line-height: 56px;
+		    font-size: 24px;
+		}
+
+		.cd-top span:hover {
+		    color: #fff;
+		}
+
+		.cd-top.cd-is-visible,
+		.cd-top.cd-fade-out,
+		.no-touch .cd-top:hover {
+		    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+		    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+		    transition: opacity .3s 0s, visibility 0s 0s;
+		}
+
+		.cd-top.cd-is-visible {
+		    /* the button becomes visible */
+		    visibility: visible;
+		    opacity: 1;
+		}
+
+		.cd-top.cd-fade-out {
+		    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+		    opacity: .4;
+		}
+
+		.no-touch .cd-top:hover {
+		    background-color: #bf1f39;
+		    opacity: 1;
+		}
+
 /* 
 *  News page
 */
@@ -4059,6 +4112,17 @@ button.alm-load-more-btn:focus {
 		position: absolute;
 		margin: 0;
 		top: -25px;
+	}
+
+	.cd-top {
+		width: 30px;
+		height: 30px;
+		right: 15px;
+	}
+	
+	.cd-top span {
+		line-height: 28px; 
+		font-size: 18px;
 	}
 
 }

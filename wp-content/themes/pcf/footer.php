@@ -82,6 +82,8 @@
 		</div>
 	</footer>
 
+	<a href="#top" class="cd-top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
 	<!-- Thank You Modal -->
 	<div class="modal fade" id="thankyou_popup" tabindex="-1" role="dialog" aria-labelledby="ThankYouPopup">
 	  	<div class="modal-dialog" role="document">
