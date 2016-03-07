@@ -109,39 +109,6 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="consultants about-us">
-	<div class="container">
-		<h2>Talk To Our Consultants</h2>
-		<p>Our experts have vast industry experience to understand and suggest the best solutions for you</p>
-		<a href="" data-toggle="modal" data-target="#contact_popup">Contact Us</a>
-	</div>
-</section>
-
-<section class="contact-icons about-us">
-	<div class="container">
-		<div class="col-sm-4 contact-icon-col">
-			<div class="contact-icon-wrap">
-				<h2>Office</h2>
-				<h3>Bldg 7, Street N606, JAFZA Dubai</h3>
-			</div>
-		</div>
-
-		<div class="col-sm-4 contact-icon-col">
-			<div class="contact-icon-wrap">
-				<h2>Phone</h2>
-				<h3>+971 4 8817000</h3>
-			</div>
-		</div>
-
-		<div class="col-sm-4 contact-icon-col">
-			<div class="contact-icon-wrap">
-				<h2>E-mail</h2>
-				<h3><a href="mailto:info@pcf-uae.com">info@pcf-uae.com</a></h3>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section class="home-certificates">
 	<div class="container">
 		<div class="row">
@@ -179,6 +146,39 @@ get_header(); ?>
 					endif;
 					?>
 				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="consultants about-us">
+	<div class="container">
+		<h2>Talk To Our Consultants</h2>
+		<p>Our experts have vast industry experience to understand and suggest the best solutions for you</p>
+		<a href="" data-toggle="modal" data-target="#contact_popup">Contact Us</a>
+	</div>
+</section>
+
+<section class="contact-icons about-us">
+	<div class="container">
+		<div class="col-sm-4 contact-icon-col">
+			<div class="contact-icon-wrap">
+				<h2>Office</h2>
+				<h3>Bldg 7, Street N606, JAFZA Dubai</h3>
+			</div>
+		</div>
+
+		<div class="col-sm-4 contact-icon-col">
+			<div class="contact-icon-wrap">
+				<h2>Phone</h2>
+				<h3><?php the_field('phone' , 'options'); ?></h3>
+			</div>
+		</div>
+
+		<div class="col-sm-4 contact-icon-col">
+			<div class="contact-icon-wrap">
+				<h2>E-mail</h2>
+				<h3><a href="mailto:<?php the_field('email' , 'options'); ?>"><?php the_field('email' , 'options'); ?></a></h3>
 			</div>
 		</div>
 	</div>

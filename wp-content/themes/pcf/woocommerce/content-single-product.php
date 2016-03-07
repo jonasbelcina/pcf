@@ -112,7 +112,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="col-sm-4 contact-icon-col">
 				<div class="contact-icon-wrap">
 					<h2>E-mail</h2>
-					<h3><a href="mailto:info@pcf-uae.com">info@pcf-uae.com</a></h3>
+					<h3><a href="mailto:<?php the_field('email' , 'options'); ?>"><?php the_field('email' , 'options'); ?></a></h3>
 				</div>
 			</div>
 		</div>
