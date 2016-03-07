@@ -20,6 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+global $post;
+$prod_terms = get_the_terms( $post->ID, 'product_cat' );
+// foreach ($prod_terms as $prod_term) {
+// 	print_r(array($prod_term));
+// }
+
 if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_before;
@@ -31,7 +37,11 @@ if ( ! empty( $breadcrumb ) ) {
 		echo $before;
 
 		if ( ! empty( $crumb[1] ) && sizeof( $breadcrumb ) !== $key + 1 ) {
-			echo '<a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . '</a>';
+			if(is_single() && $key == 1) :
+				echo '<a href="' . home_url() .'/products#' . $prod_terms[0]->slug . '">' . esc_html( $crumb[0] ) . '</a>';
+			else :
+				echo '<a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . '</a>';
+			endif;
 		} else {
 			echo esc_html( $crumb[0] );
 		}
