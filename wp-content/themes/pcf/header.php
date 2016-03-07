@@ -50,8 +50,8 @@
                 		    <ul class="nav navbar-nav">
                 		    	<li><a href="<?php echo home_url(); ?>" <?php if(is_front_page()) { ?>class="current-page"<?php } ?>>Home</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/profile" <?php if(is_page('141')) { ?>class="current-page"<?php } ?>>Profile</a></li>
-                		    	<li><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ) ?>" <?php if(is_shop()) { ?>class="current-page"<?php } ?>>Products</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/services" <?php if(is_page('413')) { ?>class="current-page"<?php } ?>>Services</a></li>
+                		    	<li><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ) ?>" <?php if(is_shop()) { ?>class="current-page"<?php } ?>>Products</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/news" <?php if(is_home()) { ?>class="current-page"<?php } ?>>News</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/contact-us" <?php if(is_page('115')) { ?>class="current-page"<?php } ?>>Contact Us</a></li>
                 		    </ul>
