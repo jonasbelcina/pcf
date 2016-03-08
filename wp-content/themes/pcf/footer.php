@@ -105,7 +105,7 @@
 <?php if(is_page('413')) : ?>
 	<script type="text/javascript">
 		function link_to_brochure(link, filename) {
-		    alert(link);
+		    // alert(link);
 		    $.ajax({
 		        url: link,
 		        type: "GET",
