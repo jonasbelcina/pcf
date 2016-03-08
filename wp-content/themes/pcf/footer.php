@@ -102,32 +102,31 @@
 	  	</div>
 	</div>
 
+<?php if(is_page('413')) : ?>
 	<script type="text/javascript">
-		// (function($){
-			function link_to_brochure(link, filename) {
-			    alert(link);
-			    $.ajax({
-			        url: link,
-			        type: "GET",
-			        dataType: 'binary',
-			        success: function(result) {
-			            console.log(result);
-			            var url = URL.createObjectURL(result);
-			            var $a = $('<a />', {
-			                'href': url,
-			                'download': filename + '.pdf',
-			                'text': "click"
-			            }).hide().appendTo("body")[0].click();
-			            setTimeout(function() {
-			                URL.revokeObjectURL(url);
-			            }, 500);
-			            $('.wpcf7-mail-sent-ok').css('display', 'none');
-			        }
-			    });
-			}
-		// })(jQuery);
+		function link_to_brochure(link, filename) {
+		    alert(link);
+		    $.ajax({
+		        url: link,
+		        type: "GET",
+		        dataType: 'binary',
+		        success: function(result) {
+		            console.log(result);
+		            var url = URL.createObjectURL(result);
+		            var $a = $('<a />', {
+		                'href': url,
+		                'download': filename + '.pdf',
+		                'text': "click"
+		            }).hide().appendTo("body")[0].click();
+		            setTimeout(function() {
+		                URL.revokeObjectURL(url);
+		            }, 500);
+		            $('.wpcf7-mail-sent-ok').css('display', 'none');
+		        }
+		    });
+		}
 	</script>
-
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 </body>
