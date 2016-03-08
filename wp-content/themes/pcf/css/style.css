@@ -965,7 +965,7 @@ header {
 
 		.timeline li:nth-child(2) {
 		    top: -6px;
-		    left: 8%;
+		    left: 18%;
 		}
 
 			.timeline li:nth-child(2) .timeline-bubble {
@@ -974,14 +974,14 @@ header {
 
 		.timeline li:nth-child(3) {
 		    top: -6px;
-		    left: 29%;
+		    left: 42%;
 		}
 
 			.timeline li:nth-child(3) .timeline-bubble {
 			    bottom: 55px;
 			}
 
-		.timeline li:nth-child(4) {
+		/*.timeline li:nth-child(4) {
 		    top: -6px;
 		    left: 35.5%;
 		}
@@ -997,11 +997,11 @@ header {
 
 			.timeline li:nth-child(5) .timeline-bubble {
 			    bottom: 55px;
-			}
+			}*/
 
 		.timeline li:last-child {
 		    top: -6px;
-		    left: 88%;
+		    left: 90%;
 		}
 
 			.timeline li:last-child .timeline-bubble {
@@ -4053,7 +4053,7 @@ button.alm-load-more-btn:focus {
 			background: #000;
 			margin-top: -8px;
 		}
-		
+
 	.catalogue {
 		padding: 30px 20px;
 	}
