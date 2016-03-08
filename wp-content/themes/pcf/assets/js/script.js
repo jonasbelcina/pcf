@@ -176,17 +176,26 @@
 	if(ww > 768){
 		$(window).scroll(function(e){
 
-			if($('.product-listing').length){
+			var followHeight;
+
+			if($('.product-listing').length) {
+				followHeight = $('.product-listing');
+			} else if($('.details-banner').length) {
+				followHeight = $('.details-banner');
+			}
+
+			if(followHeight){
 				var windowTop = $(window).scrollTop();
-				var productTop = $('.product-listing').offset().top;
+				var productTop = followHeight.offset().top;
 				var sidebarHeight = $('.woo-sidebar').height();
-				var totalheight = $('.product-listing').height();
+				var totalheight = followHeight.height();
 
 				if(windowTop > productTop && ( sidebarHeight + windowTop - productTop ) < totalheight )
 					$('.woo-sidebar').css('margin-top' , windowTop - productTop -20 );
 				else if(windowTop < productTop)
 					$('.woo-sidebar').css('margin-top' , 0 );
 			}
+
 		});
 	}
 

@@ -2441,6 +2441,10 @@ footer {
 		display: inline-block;
 	}
 
+	.single-product .woo-sidebar h2 {
+		margin-top: 40px;
+	}
+
 	.top-parent {
 		color: #676666;
 		font-family: 'GraphieRegular';
@@ -2675,6 +2679,15 @@ button.alm-load-more-btn:focus {
 		height: 100%;
 	}
 
+	.kitchen-details-banner .owl-item {
+		overflow: hidden;
+	}
+
+	.kitchen-details-banner .image-holder {
+		height: calc(100% - 25px);
+		text-align: center;
+	}
+
 	.kitchen-details-banner img {
 		height: 100%;
 		max-width: 100%;
@@ -2725,7 +2738,7 @@ button.alm-load-more-btn:focus {
 			color: #bd9c68;
 			position: absolute;
 			top: 0;
-			left: -30px;
+			left: 0;
 		}
 
 		.kitchen-details-gallery .owl-next {
@@ -2739,7 +2752,7 @@ button.alm-load-more-btn:focus {
 			color: #bd9c68;
 			position: absolute;
 			top: 0;
-			right: -30px;
+			right: 0;
 		}
 
 .kitchen-about {
@@ -3285,6 +3298,7 @@ button.alm-load-more-btn:focus {
 	.google-maps {
 		height: 299px;
 	}
+
 }
 
 @media only screen and (max-width : 991px) {
@@ -3517,6 +3531,23 @@ button.alm-load-more-btn:focus {
 		height: auto;
 	}
 
+	.single-product .woo-sidebar {
+		font-size: 16px;
+	}
+
+	.single-product span.expand {
+		font-size: 9px;
+		padding: 0 5px;
+	}
+
+	/*.kitchen-details-gallery .owl-prev:before {
+		left: -30px;
+	}
+
+	.kitchen-details-gallery .owl-next:before {
+		right: -30px;
+	}*/
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -3672,9 +3703,21 @@ button.alm-load-more-btn:focus {
 		min-height: 60px;
 	}
 
+	.details-banner .pull-right {
+		float: none !important;
+	}
+
+	.kitchen-details-banner {
+		margin-bottom: 0;
+	}
+
 	.kitchen-details-banner .banner-caption {
 		font-size: 21px;
 		padding: 10px 0;
+	}
+
+	.single-product .woo-sidebar {
+		margin-bottom: 40px;
 	}
 
 	.kitchen-about {
@@ -4010,15 +4053,7 @@ button.alm-load-more-btn:focus {
 			background: #000;
 			margin-top: -8px;
 		}
-
-		.kitchen-details-gallery .owl-prev:before {
-			left: 0;
-		}
-
-		.kitchen-details-gallery .owl-next:before {
-			right: 0;
-		}
-
+		
 	.catalogue {
 		padding: 30px 20px;
 	}

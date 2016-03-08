@@ -25,7 +25,7 @@ $cat = $wp_query->get_queried_object();
 // var_dump($cat);
 ?>
 
-<div class="col-sm-3 woo-sidebar">
+<div class="col-sm-3 woo-sidebar <?php if(is_single()) { ?>single-sidebar<?php } ?>">
 	<h2>Our Offerings</h2>
 	<ul>
 		<?php
@@ -52,7 +52,7 @@ $cat = $wp_query->get_queried_object();
 					}
 
 				?>
-				<li class="top-parent <?php //if($parent->count > 0) { echo 'expand'; } ?> <?php if($cat->term_id == $parent->term_id) { echo 'current-cat cat-active'; } ?>"><a class="smooth" href="#<?php echo $parent->slug; ?>"><?php echo $parent->name; ?></a><?php echo $this_parent_class; ?></li>
+				<li class="top-parent <?php //if($parent->count > 0) { echo 'expand'; } ?> <?php if($cat->term_id == $parent->term_id) { echo 'current-cat cat-active'; } ?>"><a class="smooth" href="<?php if(is_single()) { echo get_permalink( woocommerce_get_page_id( 'shop' ) ); } echo '#' . $parent->slug; ?>"><?php echo $parent->name; ?></a><?php echo $this_parent_class; ?></li>
 					<?php 
 					if($parent->count > 0) :
 						$products_args = array(

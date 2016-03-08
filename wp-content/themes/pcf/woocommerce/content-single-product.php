@@ -33,47 +33,74 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 	echo get_the_password_form();
 	 	return;
 	 }
+
+	 global $wp_query;
+	 $cat = $wp_query->get_queried_object();
+	 // var_dump($cat);
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php do_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb' ); ?>
 
-	<div class="container product-title">
-		<h2><?php the_title(); ?></h2>
-	</div>
-
-	<div class="kitchen-details-banner">
+	<section class="details-banner">
 		<div class="container">
-			<?php if(get_field('video')) : ?>
-				<div class="videoWrapper">
-					<iframe width="1280" height="720" src="https://www.youtube.com/embed/<?php the_field('video'); ?>?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-				</div>
-			<?php else : ?>
-				<?php
-					$images = get_field('gallery');
+			<div class="row">
+				<div class="col-sm-9 pull-right">
+					<div class="product-title">
+						<h2><?php the_title(); ?></h2>
+					</div>
 
-					if( $images ): ?>
-					    <div class="kitchen-details-gallery">
-					        <?php foreach( $images as $image ): ?>
-		                    	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					        <?php endforeach; ?>
-					    </div>
-					<?php endif;
+					<div class="kitchen-details-banner">
+						<!-- <div class="container"> -->
+							<?php if(get_field('video')) : ?>
+								<div class="videoWrapper">
+									<iframe width="1280" height="720" src="https://www.youtube.com/embed/<?php the_field('video'); ?>?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+								</div>
+							<?php else : ?>
+								<?php
+									$images = get_field('gallery');
 
-				?>
-				
-			<?php endif; ?>
+									if( $images ): 
+										$ctr = 1; ?>
+									    <div class="kitchen-details-gallery">
+									        <?php foreach( $images as $image ):
+									        	$words = explode("-", $cat->post_name);
+									        	$prefix = '';
 
-			<?php if(get_field('banner_text')) : ?>
-				<div class="banner-caption">
-					<div class="container">
-						<?php the_field('banner_text'); ?>
+									        	foreach ($words as $w) {
+									        	  $prefix .= $w[0];
+									        	} ?>
+
+						                    	<div class="image-holder">
+						                    		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						                    		<span><?php echo strtoupper($prefix) . $ctr; ?></span>
+					                    		</div>
+
+									        <?php $ctr++;
+									        endforeach; ?>
+									    </div>
+									<?php endif;
+
+								?>
+								
+							<?php endif; ?>
+
+							<?php if(get_field('banner_text')) : ?>
+								<div class="banner-caption">
+									<div class="container">
+										<?php the_field('banner_text'); ?>
+									</div>
+								</div>
+							<?php endif; ?>
+						<!-- </div> -->
 					</div>
 				</div>
-			<?php endif; ?>
-		</div>
-	</div>
 
+				<?php do_action( 'woocommerce_sidebar' ); ?>
+			</div>
+		</div>
+	</section>
+	
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook.
