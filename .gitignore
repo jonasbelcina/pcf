@@ -9,7 +9,7 @@ wp-content/*
 
 # Ignore everything in the "themes" directory, except the themes you specify
 wp-content/themes/*
-!wp-content/themes/palmonade/
+
 
 # sitemaps not needed locally #
 sitemap.xml
