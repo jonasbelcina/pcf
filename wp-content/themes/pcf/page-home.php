@@ -54,7 +54,7 @@ get_header(); ?>
 							<?php endif; ?>
 						</div>
 						<p><?php the_field('contact_box_content'); ?></p>
-						<a href="<?php the_field('contact_box_button_link'); ?>" data-toggle="modal" data-target="#contact_popup"><?php the_field('contact_box_button_text'); ?></a>
+						<a href="<?php the_field('contact_box_button_link'); ?>"><?php the_field('contact_box_button_text'); ?></a>
 					</div>
 				</div>
 			</div>
