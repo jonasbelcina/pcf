@@ -68,7 +68,8 @@ get_header(); ?>
 							<p><?php the_field('design_content'); ?></p>
 						<?php endif; ?>
 						<?php $file = get_field('brochure'); ?>
-						<a href="<?php echo $file['url']; ?>" target="_blank">Download Brochure</a>
+						<a href="" data-toggle="modal" data-target="#download-brochure">Download Brochure</a>
+						<a class="active-brochure" href="http://pcf.heych.ae/wp-content/uploads//2016/02/Palmon-Contract-Furniture.pdf" dataFilename="Palmon Contract Furniture" style="display: none;"></a>
 					</div>
 				</div>
 			</div>
@@ -140,6 +141,22 @@ get_header(); ?>
 
       		<div class="modal-body">
     			<?php echo do_shortcode('[contact-form-7 id="113" title="Contact Us Popup"]'); ?>
+     	 	</div>
+    	</div>
+  	</div>
+</div>
+
+<!-- Download Brochure Modal -->
+<div class="modal fade" id="download-brochure" tabindex="-1" role="dialog" aria-labelledby="Download Brochure">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+   		 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h4 class="modal-title">Download Brochure</h4>
+      		</div>
+
+      		<div class="modal-body">
+    			<?php echo do_shortcode('[contact-form-7 id="708" title="Download Brochure"]'); ?>
      	 	</div>
     	</div>
   	</div>

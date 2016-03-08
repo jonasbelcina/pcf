@@ -1,4 +1,7 @@
 ;(function($){
+	var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+	var xhr;
+
 	$('.home-banner').owlCarousel({
 		items: 1,
 		nav: true,
@@ -291,30 +294,57 @@
 	  });
 	});
 
-	    // browser window scroll (in pixels) after which the "back to top" link is shown
-	    var offset = 300,
-	    	//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-	    	offset_opacity = 1200,
-	    	//duration of the top scrolling animation (in ms)
-	    	scroll_top_duration = 700,
-	    	//grab the "back to top" link
-			$back_to_top = $('.cd-top');
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+    	//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+    	offset_opacity = 1200,
+    	//duration of the top scrolling animation (in ms)
+    	scroll_top_duration = 700,
+    	//grab the "back to top" link
+		$back_to_top = $('.cd-top');
 
-		//hide or show the "back to top" link
-		$(window).scroll(function(){
-			( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-			if( $(this).scrollTop() > offset_opacity ) { 
-				$back_to_top.addClass('cd-fade-out');
-			}
-		});
+	//hide or show the "back to top" link
+	$(window).scroll(function(){
+		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+		if( $(this).scrollTop() > offset_opacity ) { 
+			$back_to_top.addClass('cd-fade-out');
+		}
+	});
 
-		//smooth scroll to top
-		$back_to_top.on('click', function(event){
-			event.preventDefault();
-			$('body,html').animate({
-				scrollTop: 0 ,
-			 	}, scroll_top_duration
-			);
-		});
+	//smooth scroll to top
+	$back_to_top.on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			scrollTop: 0 ,
+		 	}, scroll_top_duration
+		);
+	});
+
+
+	// $(document).ready(function () {
+	// 	link_to_brochure();
+	// });
+
+	// function link_to_brochure(link, filename) {
+	//     alert(link);
+	//     $.ajax({
+	//         url: link,
+	//         type: "GET",
+	//         dataType: 'binary',
+	//         success: function(result) {
+	//             console.log(result);
+	//             var url = URL.createObjectURL(result);
+	//             var $a = $('<a />', {
+	//                 'href': url,
+	//                 'download': filename + '.pdf',
+	//                 'text': "click"
+	//             }).hide().appendTo("body")[0].click();
+	//             setTimeout(function() {
+	//                 URL.revokeObjectURL(url);
+	//             }, 500);
+	//             $('.wpcf7-mail-sent-ok').css('display', 'none');
+	//         }
+	//     });
+	// }
 
 })(jQuery);

@@ -102,6 +102,32 @@
 	  	</div>
 	</div>
 
+	<script type="text/javascript">
+		// (function($){
+			function link_to_brochure(link, filename) {
+			    alert(link);
+			    $.ajax({
+			        url: link,
+			        type: "GET",
+			        dataType: 'binary',
+			        success: function(result) {
+			            console.log(result);
+			            var url = URL.createObjectURL(result);
+			            var $a = $('<a />', {
+			                'href': url,
+			                'download': filename + '.pdf',
+			                'text': "click"
+			            }).hide().appendTo("body")[0].click();
+			            setTimeout(function() {
+			                URL.revokeObjectURL(url);
+			            }, 500);
+			            $('.wpcf7-mail-sent-ok').css('display', 'none');
+			        }
+			    });
+			}
+		// })(jQuery);
+	</script>
+
 
 <?php wp_footer(); ?>
 </body>

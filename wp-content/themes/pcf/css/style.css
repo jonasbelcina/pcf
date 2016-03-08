@@ -3096,7 +3096,8 @@ button.alm-load-more-btn:focus {
 	}
 
 #contact_popup .modal-dialog,
-#kitchen_enquiry .modal-dialog {
+#kitchen_enquiry .modal-dialog,
+#download-brochure .modal-dialog {
 	max-width: 400px;
 }
 
@@ -3715,6 +3716,10 @@ button.alm-load-more-btn:focus {
 
 	.we-offer {
 		margin: 0 15px;
+	}
+
+	.modal-dialog {
+		margin: 10px auto;
 	}
 
 }
