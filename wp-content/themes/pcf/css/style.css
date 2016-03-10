@@ -1267,6 +1267,10 @@ header {
 				right: 0;
 			}
 
+	.our-clients {
+		background: #fafafa;
+	}
+
 	.our-clients .owl-controls {
 		display: none;
 	}
