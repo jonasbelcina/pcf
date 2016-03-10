@@ -30,33 +30,36 @@
 		autoplayTimeout: 8000
 	});
 
-	$('.brand-items').owlCarousel({
-		items: 1,
-		nav: true,
-		loop: true,
-		margin: 15,
-		navText: false,
-		autoplay: true,
-		responsive:{
-		    0:{
-		        items:1
-		    },
-		    320:{
-		        items:1
-		    },
-		    420:{
-		        items:1
-		    },
-		    568:{
-		        items:2
-		    },
-		    767:{
-		        items:3
-		    },
-		    991:{
-		        items:5
-		    }
-		}
+	$(window).load(function () {
+		$('.our-clients').css('display', 'block');
+		$('.brand-items').owlCarousel({
+			items: 1,
+			nav: true,
+			loop: true,
+			margin: 15,
+			navText: false,
+			autoplay: true,
+			responsive:{
+			    0:{
+			        items:1
+			    },
+			    320:{
+			        items:1
+			    },
+			    420:{
+			        items:1
+			    },
+			    568:{
+			        items:2
+			    },
+			    767:{
+			        items:3
+			    },
+			    991:{
+			        items:5
+			    }
+			}
+		});
 	});
 
 	$('.related-slides').owlCarousel({

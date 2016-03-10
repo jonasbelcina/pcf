@@ -1267,6 +1267,10 @@ header {
 				right: 0;
 			}
 
+	.our-clients {
+		display: none;
+	}
+
 	.consultants.about-us {
 		background: url("../assets/images/consultants-about.jpg") center no-repeat;
 		background-size: cover;
