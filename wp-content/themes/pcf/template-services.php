@@ -97,25 +97,6 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="our-clients about-us">
-	<div class="container">
-		<div class="row">
-			<h2><?php the_field('clients_heading'); ?></h2>
-			<?php 
-				$images = get_field('client');
-				if( $images ): ?>
-					<div class="brand-items">
-						<?php foreach( $images as $image ): ?>
-							<div class="brand-item">
-								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-							</div>
-						<?php endforeach; ?>
-					</div>
-			<?php endif; ?>
-		</div>
-	</div>
-</section>
-
 <section class="consultants about-us">
 	<div class="container">
 		<h2>Talk To Our Consultants</h2>
@@ -145,6 +126,25 @@ get_header(); ?>
 				<h2>E-mail</h2>
 				<h3><a href="mailto:<?php the_field('email' , 'options'); ?>"><?php the_field('email' , 'options'); ?></a></h3>
 			</div>
+		</div>
+	</div>
+</section>
+
+<section class="our-clients about-us">
+	<div class="container">
+		<div class="row">
+			<h2><?php the_field('clients_heading'); ?></h2>
+			<?php 
+				$images = get_field('client');
+				if( $images ): ?>
+					<div class="brand-items">
+						<?php foreach( $images as $image ): ?>
+							<div class="brand-item">
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+							</div>
+						<?php endforeach; ?>
+					</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
