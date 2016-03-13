@@ -270,7 +270,7 @@ header {
 
 .home-about {
 	background: #f2f2f2;
-	padding: 80px 0;
+	padding: 50px 0;
 }
 
 	.home-about h2 {
@@ -296,7 +296,7 @@ header {
 		}
 
 	.home-about p {
-		font-size: 20px;
+		font-size: 18px;
 		color: #676666;
 		line-height: 30px;
 		font-family: 'GraphieRegular';
@@ -312,7 +312,7 @@ header {
 		color: #676666;
 		font-size: 18px;
 		list-style-image: url("../assets/images/list.png");
-		text-indent: 10px;
+		padding-left: 10px;
 		margin-bottom: 5px;
 	}
 
