@@ -1303,8 +1303,7 @@ header {
 		padding: 0;
 	}
 
-		.consultants.about-us .overlay,
-		.consultants .overlay {
+		.consultants.about-us .overlay {
 			padding: 110px 15px 189px;
 			background: rgba(255,255,255,0.85);
 			height: inherit;
@@ -2998,6 +2997,12 @@ button.alm-load-more-btn:focus {
 	text-align: center;
 	border-top: 1px solid #ebebeb;
 }
+
+	.consultants .overlay {
+		background: rgba(255,255,255,0.85);
+		height: inherit;
+		padding: 45px 0;
+	}
 
 	.consultants h2 {
 		font-size: 36px;
