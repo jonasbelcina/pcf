@@ -30,7 +30,7 @@
 				<nav class="navbar navbar-default">
 	                <div class="navbar-header">
 		                <a class="navbar-brand" href="<?php echo home_url(); ?>">
-		                	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-pcf-03-03.png" alt="Palmon Contract Furniture" />
+		                	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/pcf-logo.png" alt="Palmon Contract Furniture" />
 		                </a>
 
 		                <div class="header-contact">

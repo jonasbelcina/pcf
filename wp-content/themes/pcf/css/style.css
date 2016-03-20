@@ -336,6 +336,7 @@ header {
 
 	.home-contact {
 		position: relative;
+		margin-top: 80px;
 	}
 
 	.home-contact .overlay {
@@ -3210,6 +3211,10 @@ button.alm-load-more-btn:focus {
 	.home-about h2 {
 		margin-top: 50px;
 	}
+
+		.home-contact {
+			margin-top: 0;
+		}
 
 		.home-contact img {
 			margin: 0 auto;
