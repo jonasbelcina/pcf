@@ -36,23 +36,25 @@ get_header(); ?>
 
 <?php $timeline_bg = get_field('timeline_bg_image'); ?>
 <section class="timeline about-us" <?php if($timeline_bg) { ?>style="background: url(<?php echo $timeline_bg['url']; ?>) center no-repeat; background-size: cover;"<?php } ?>>
-	<div class="container">
-		<div class="row">
-			<h2><?php the_field('timeline_heading'); ?></h2>
+	<div class="overlay">
+		<div class="container">
+			<div class="row">
+				<h2><?php the_field('timeline_heading'); ?></h2>
 
-			<?php if( have_rows('timeline') ): ?>
-				<ul>
-				<?php while( have_rows('timeline') ): the_row(); ?>
-					<li>
-						<div class="timeline-bubble">
-							<h3><?php the_sub_field('heading'); ?></h3>
-							<p><?php the_sub_field('content'); ?></p>
-							<span><?php the_sub_field('year'); ?></span>
-						</div>
-					</li>
-				<?php endwhile; ?>
-				</ul>
-			<?php endif; ?>
+				<?php if( have_rows('timeline') ): ?>
+					<ul>
+					<?php while( have_rows('timeline') ): the_row(); ?>
+						<li>
+							<div class="timeline-bubble">
+								<h3><?php the_sub_field('heading'); ?></h3>
+								<p><?php the_sub_field('content'); ?></p>
+								<span><?php the_sub_field('year'); ?></span>
+							</div>
+						</li>
+					<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+			</div>
 		</div>
 	</div>
 </section>
@@ -97,11 +99,13 @@ get_header(); ?>
 					<?php $contact_box_image = get_field('box_image_background'); ?>
 					<img class="img-responsive" src="<?php echo $contact_box_image['url']; ?>" alt="<?php echo $contact_box_image['alt']; ?>" />
 					<div class="home-contact-content">
-						<div>
-							<h3><?php the_field('box_heading'); ?></h3>
+						<div class="overlay">
+							<div>
+								<h3><?php the_field('box_heading'); ?></h3>
+							</div>
+							<p><?php the_field('box_content'); ?></p>
+							<a href="<?php the_field('box_button_link'); ?>"><?php the_field('box_button_text'); ?></a>
 						</div>
-						<p><?php the_field('box_content'); ?></p>
-						<a href="<?php the_field('box_button_link'); ?>"><?php the_field('box_button_text'); ?></a>
 					</div>
 				</div>
 			</div>
