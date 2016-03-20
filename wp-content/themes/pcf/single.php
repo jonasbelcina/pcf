@@ -14,9 +14,11 @@ get_header(); ?>
 ?>
 
 <section class="banner news-banner" <?php if($thumb){ ?>style="background: url('<?php echo $thumb; ?>') center top / cover no-repeat;"<?php } ?>>
-	<div class="container">
-		<div class="banner-text">
-			<h2><?php the_field('banner_text', 58); ?></h2>
+	<div class="overlay">
+		<div class="container">
+			<div class="banner-text">
+				<h2><?php the_field('banner_text', 58); ?></h2>
+			</div>
 		</div>
 	</div>
 </section>
