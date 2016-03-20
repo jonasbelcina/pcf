@@ -413,13 +413,13 @@ header {
 .home-services {
 	height: 300px;
 	text-align: center;
-	padding: 40px 0;
 	position: relative;
 }
 
 	.home-services .overlay {
 		background: rgba(142,117,79,0.75);
 		height: 100%;
+		padding: 40px 0;
 	}
 
 	.home-services h2 {
