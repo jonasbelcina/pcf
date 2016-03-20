@@ -75,10 +75,12 @@ get_header(); ?>
 
 <?php $services_bg = get_field('services_background_image'); ?>
 <section class="home-services" style="background: url(<?php echo $services_bg['url']; ?>) center top no-repeat; background-size: cover;">
-	<div class="container">
-		<div class="row">
-			<h2><?php the_field('services_heading'); ?></h2>
-			<a href="<?php the_field('services_button_link'); ?>"><?php the_field('services_button_text'); ?></a>
+	<div class="overlay">
+		<div class="container">
+			<div class="row">
+				<h2><?php the_field('services_heading'); ?></h2>
+				<a href="<?php the_field('services_button_link'); ?>"><?php the_field('services_button_text'); ?></a>
+			</div>
 		</div>
 	</div>
 </section>

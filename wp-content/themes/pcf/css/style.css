@@ -417,6 +417,11 @@ header {
 	position: relative;
 }
 
+	.home-services .overlay {
+		background: rgba(142,117,79,0.75);
+		height: 100%;
+	}
+
 	.home-services h2 {
 		font-family: 'GraphieBold';
 		font-size: 32px;
