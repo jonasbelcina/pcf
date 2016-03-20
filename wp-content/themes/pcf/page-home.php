@@ -42,19 +42,21 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="home-contact">
-					<?php $contact_box_image = get_field('contact_box_background_image'); ?>
-					<img class="img-responsive" src="<?php echo $contact_box_image['url']; ?>" alt="<?php echo $contact_box_image['alt']; ?>" />
-					<div class="home-contact-content">
-						<div>
-							<?php if(get_field('contact_box_title')) : ?>
-								<h3><?php the_field('contact_box_title'); ?></h3>
-							<?php endif; ?>
-							<?php if(get_field('contact_box_subtitle')) : ?>
-								<h4><?php the_field('contact_box_subtitle'); ?></h4>
-							<?php endif; ?>
+					<div class="overlay">
+						<?php $contact_box_image = get_field('contact_box_background_image'); ?>
+						<img class="img-responsive" src="<?php echo $contact_box_image['url']; ?>" alt="<?php echo $contact_box_image['alt']; ?>" />
+						<div class="home-contact-content">
+							<div>
+								<?php if(get_field('contact_box_title')) : ?>
+									<h3><?php the_field('contact_box_title'); ?></h3>
+								<?php endif; ?>
+								<?php if(get_field('contact_box_subtitle')) : ?>
+									<h4><?php the_field('contact_box_subtitle'); ?></h4>
+								<?php endif; ?>
+							</div>
+							<p><?php the_field('contact_box_content'); ?></p>
+							<a href="<?php the_field('contact_box_button_link'); ?>"><?php the_field('contact_box_button_text'); ?></a>
 						</div>
-						<p><?php the_field('contact_box_content'); ?></p>
-						<a href="<?php the_field('contact_box_button_link'); ?>"><?php the_field('contact_box_button_text'); ?></a>
 					</div>
 				</div>
 			</div>

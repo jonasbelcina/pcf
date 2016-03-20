@@ -333,12 +333,16 @@ header {
 		position: relative;
 	}
 
+	.home-contact .overlay {
+		background: rgba(142,117,79,0.5);
+	}
+
 	.home-contact-content {
 		position: absolute;
 		top: 0;
 		width: 100%;
-		max-width: 545px;
-		margin: 4px;
+		max-width: 553px;
+		border: 4px solid #C0A26C;
 		height: 100%;
 		text-align: center;
 		color: #fff;
