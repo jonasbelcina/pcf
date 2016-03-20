@@ -3618,7 +3618,7 @@ button.alm-load-more-btn:focus {
 
 	.header-contact {
 		padding-right: 15px;
-		margin-top: 28px;
+		/*margin-top: 28px;*/
 	}
 
 	.header-contact li, .header-contact li a {
