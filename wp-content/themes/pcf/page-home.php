@@ -42,10 +42,10 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="home-contact">
-					<div class="overlay">
-						<?php $contact_box_image = get_field('contact_box_background_image'); ?>
-						<img class="img-responsive" src="<?php echo $contact_box_image['url']; ?>" alt="<?php echo $contact_box_image['alt']; ?>" />
-						<div class="home-contact-content">
+					<?php $contact_box_image = get_field('contact_box_background_image'); ?>
+					<img class="img-responsive" src="<?php echo $contact_box_image['url']; ?>" alt="<?php echo $contact_box_image['alt']; ?>" />
+					<div class="home-contact-content">
+						<div class="overlay">
 							<div>
 								<?php if(get_field('contact_box_title')) : ?>
 									<h3><?php the_field('contact_box_title'); ?></h3>
