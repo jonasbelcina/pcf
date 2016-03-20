@@ -334,7 +334,8 @@ header {
 	}
 
 	.home-contact .overlay {
-		background: rgba(142,117,79,0.5);
+		background: rgba(142,117,79,0.75);
+		height: 100%;
 	}
 
 	.home-contact-content {
@@ -358,7 +359,7 @@ header {
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		margin: 0;
-		padding: 35px 0;
+		padding: 35px 5px;
 		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
 	}
 
