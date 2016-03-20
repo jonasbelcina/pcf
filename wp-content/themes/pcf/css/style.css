@@ -1300,11 +1300,12 @@ header {
 	.consultants.about-us {
 		background: url("../assets/images/consulting.jpg") center no-repeat;
 		background-size: cover;
+		padding: 0;
 	}
 
 		.consultants.about-us .overlay {
 			padding: 110px 15px 189px;
-			background: rgba(255,255,255,0.2);
+			background: rgba(255,255,255,0.85);
 			height: inherit;
 		}
 
@@ -3583,6 +3584,14 @@ button.alm-load-more-btn:focus {
 	.kitchen-details-gallery .owl-next:before {
 		right: -30px;
 	}*/
+
+	.consultants {
+		padding: 0;
+	}
+
+	.consultants.about-us .overlay {
+		padding-bottom: 50px;
+	}
 
 }
 
