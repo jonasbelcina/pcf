@@ -1303,7 +1303,8 @@ header {
 		padding: 0;
 	}
 
-		.consultants.about-us .overlay {
+		.consultants.about-us .overlay,
+		.consultants .overlay {
 			padding: 110px 15px 189px;
 			background: rgba(255,255,255,0.85);
 			height: inherit;
