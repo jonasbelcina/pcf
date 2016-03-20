@@ -3813,7 +3813,7 @@ button.alm-load-more-btn:focus {
 	}
 
 	.navbar-brand > img {
-		margin: 0 auto;
+		margin: 15px auto 0;
 		max-width: 200px;
 	}
 
