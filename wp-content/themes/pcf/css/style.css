@@ -348,7 +348,7 @@ header {
 		color: #fff;
 	}
 
-	.home-contact-content > div {
+	.home-contact-content > div:not(.overlay) {
 		background: rgba(0,0,0,0.2);
 	}
 
