@@ -107,7 +107,8 @@ header {
 		}
 
 		.navbar-brand > img {
-			max-width: 278px;
+			max-width: 300px;
+			margin-top: 40px;
 		}
 
 		.header-contact {
