@@ -1276,7 +1276,7 @@ header {
 	}
 
 	.consultants.about-us {
-		background: url("../assets/images/consultants-about.jpg") center no-repeat;
+		background: url("../assets/images/consulting.jpg") center no-repeat;
 		background-size: cover;
 		padding: 110px 15px 189px;
 	}
@@ -2958,7 +2958,7 @@ button.alm-load-more-btn:focus {
 	}
 
 .consultants {
-	background: url("../assets/images/consultants-about.jpg") center no-repeat;
+	background: url("../assets/images/consulting.jpg") center no-repeat;
 	padding: 45px 0;
 	text-align: center;
 	border-top: 1px solid #ebebeb;
