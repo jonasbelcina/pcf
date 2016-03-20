@@ -151,10 +151,12 @@ $cat = $wp_query->get_queried_object();
 	</div><!-- .product-listing -->
 
 	<section class="consultants about-us">
-		<div class="container">
-			<h2>Talk To Our Consultants</h2>
-			<p>Our experts have vast industry experience to understand and suggest the best solutions for you</p>
-			<a href="" data-toggle="modal" data-target="#contact_popup">Contact Us</a>
+		<div class="overlay">
+			<div class="container">
+				<h2>Talk To Our Consultants</h2>
+				<p>Our experts have vast industry experience to understand and suggest the best solutions for you</p>
+				<a href="" data-toggle="modal" data-target="#contact_popup">Contact Us</a>
+			</div>
 		</div>
 	</section>
 
