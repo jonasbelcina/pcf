@@ -2841,10 +2841,11 @@ button.alm-load-more-btn:focus {
 		background: url("../assets/images/SUBMIT-BG.jpg") center top no-repeat;
 		background-size: 100% 100%;
 		position: relative;
+		border: 4px solid #eee;
 	}
 
 		.catalogue .overlay {
-			background: rgba(255,255,255,0.7);
+			background: rgba(255,255,255,0.8);
 			height: 100%;
 			padding: 45px 50px;
 		}
@@ -4108,7 +4109,7 @@ button.alm-load-more-btn:focus {
 			margin-top: -8px;
 		}
 
-	.catalogue {
+	.catalogue .overlay {
 		padding: 30px 20px;
 	}
 
