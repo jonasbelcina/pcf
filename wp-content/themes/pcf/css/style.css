@@ -87,7 +87,7 @@ body {
 }
 
 header {
-	height: 135px;
+	height: 110px;
 	background: #000;
 }
 	
@@ -108,7 +108,7 @@ header {
 
 		.navbar-brand > img {
 			max-width: 285px;
-			margin-top: 40px;
+			margin-top: 30px;
 		}
 
 		.header-contact {
@@ -134,7 +134,7 @@ header {
 
 		#navbar {
 			float: right;
-			margin-top: 30px;
+			margin-top: 10px;
 			padding-right: 0;
 		}
 
