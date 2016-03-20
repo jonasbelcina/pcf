@@ -3586,7 +3586,7 @@ button.alm-load-more-btn:focus {
 	}*/
 
 	.consultants {
-		padding: 0;
+		padding: 0 !important;
 	}
 
 	.consultants.about-us .overlay {
