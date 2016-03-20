@@ -1798,6 +1798,11 @@ footer {
 	height: 250px;
 }
 
+	.news-banner .overlay {
+		background: rgba(142,117,79,0.85);
+		height: inherit;
+	}
+
 	.news-banner .container {
 		height: 100%;
 		padding-top: 75px;
