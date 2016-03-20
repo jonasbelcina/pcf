@@ -45,8 +45,10 @@ get_header(); ?>
 
 			<div class="col-lg-6">
 				<div class="catalogue">
-					<h3>Find out the best solutions to fit your dreams</h3>
-					<?php echo do_shortcode('[contact-form-7 id="425" title="What We Offer"]'); ?>
+					<div class="overlay">
+						<h3>Find out the best solutions to fit your dreams</h3>
+						<?php echo do_shortcode('[contact-form-7 id="425" title="What We Offer"]'); ?>
+					</div>
 				</div>
 			</div>
 		</div>

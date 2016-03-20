@@ -2838,11 +2838,16 @@ button.alm-load-more-btn:focus {
 	.catalogue {
 		max-width: 504px;
 		margin: 0 auto;
-		background: url("../assets/images/catalogue-bg.jpg") center top no-repeat;
+		background: url("../assets/images/SUBMIT-BG.jpg") center top no-repeat;
 		background-size: 100% 100%;
-		padding: 45px 50px;
 		position: relative;
 	}
+
+		.catalogue .overlay {
+			background: rgba(255,255,255,0.7);
+			height: 100%;
+			padding: 45px 50px;
+		}
 
 		.catalogue h2 {
 			margin: 0 0 20px;
