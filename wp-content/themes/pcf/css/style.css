@@ -3410,7 +3410,7 @@ button.alm-load-more-btn:focus {
 
 	.timeline {
 	    height: auto;
-	    padding: 50px 15px 25px;
+	    /*padding: 50px 15px 25px;*/
 	}
 
 	.timeline ul {
@@ -3936,6 +3936,10 @@ button.alm-load-more-btn:focus {
 		.about-us h2:after {
 			bottom: -25px;
 		}
+
+	.timeline {
+		padding: 0;
+	}
 
 	.director-msg {
 		font-size: 21px;
