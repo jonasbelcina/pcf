@@ -34,6 +34,35 @@ get_header(); ?>
 	</div>
 </section>
 
+<section class="key-competencies about-us">
+	<div class="container">
+		<div class="row">
+			<h2><?php the_field('kc_heading'); ?></h2>
+			<div class="col-md-8 kc-col">
+				<?php if( have_rows('key_competencies') ): ?>
+					<?php while( have_rows('key_competencies') ): the_row(); ?>
+						<div class="col-sm-6 kc">
+							<h3><?php the_sub_field('heading'); ?></h3>
+							<p><?php the_sub_field('content'); ?></p>
+						</div>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</div>
+
+			<div class="col-md-4">
+				<div class="kc-box">
+					<?php $image = get_field('kc_box_image'); ?>
+					<img class="img-responsive" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" />
+					<div class="overlay">
+						<p><?php the_field('kc_box_text'); ?></p>
+						<a href="" data-toggle="modal" data-target="#contact_popup"><?php the_field('box_link_text'); ?></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <?php $timeline_bg = get_field('timeline_bg_image'); ?>
 <section class="timeline about-us" <?php if($timeline_bg) { ?>style="background: url(<?php echo $timeline_bg['url']; ?>) center no-repeat; background-size: cover;"<?php } ?>>
 	<div class="overlay">

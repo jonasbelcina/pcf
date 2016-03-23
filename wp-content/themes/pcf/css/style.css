@@ -882,6 +882,82 @@ header {
 		padding: 0 15px;
 	}
 
+	.key-competencies {
+		background: #fafafa;
+	}
+
+		.kc-col {
+			overflow: hidden;
+		}
+
+		.kc {
+			padding: 0 25px;
+			margin-bottom: 20px;
+		}
+
+		.kc h3 {
+			color: #c0a06e;
+			font-family: 'GraphieBold';
+		}
+
+		.kc p {
+			color: #676666;
+			font-size: 18px;
+			line-height: 28px;
+		}
+
+		.kc-box {
+			position: relative;
+			margin-top: 120px;
+			max-width: 360px;
+		}
+
+		.kc-box .overlay {
+			background: rgba(142,117,79,0.75);
+			height: 100%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+		}
+
+		.kc-box p {
+			text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+			font-family: 'GraphieBold';
+			color: #fff;
+			font-size: 22px;
+			text-transform: uppercase;
+			padding: 0 10px;
+			margin-top: 30px;
+			text-align: center;
+			letter-spacing: 1px;
+			line-height: 28px;
+		}
+
+		.kc-box a {
+			font-family: 'GraphieRegular';
+			background: #4b4a49;
+			display: inline-block;
+			font-size: 17px;
+			color: #fff;
+			text-transform: uppercase;
+			line-height: 35px;
+			padding: 0 15px;
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			   -moz-transform: translateX(-50%);
+			    -ms-transform: translateX(-50%);
+					transform: translateX(-50%);
+		}
+
+			.kc-box a:hover,
+			.kc-box a:focus {
+				text-decoration: none;
+				outline: 0;
+			}
+
 	.timeline {
 		height: 610px;
 		padding: 0;
@@ -2731,6 +2807,12 @@ button.alm-load-more-btn:focus {
 		text-align: center;
 	}
 
+		.image-holder span {
+			display: block;
+			color: #676666;
+			margin-top: 5px;
+		}
+
 	.kitchen-details-banner img {
 		height: 100%;
 		max-width: 100%;
@@ -3358,6 +3440,11 @@ button.alm-load-more-btn:focus {
 		height: 299px;
 	}
 
+	.kc-box p {
+		margin-top: 15px;
+		font-size: 19px;
+	}
+
 }
 
 @media only screen and (max-width : 991px) {
@@ -3613,6 +3700,14 @@ button.alm-load-more-btn:focus {
 
 	.consultants.about-us .overlay {
 		padding-bottom: 50px;
+	}
+
+	.kc-box {
+		margin: 40px auto 0;
+	}
+
+	.kc-box p {
+		margin-top: 30px;
 	}
 
 }
@@ -4299,6 +4394,14 @@ button.alm-load-more-btn:focus {
 	.contact-us input[type="submit"],
 	.modal-body form input[type="submit"] {
 		margin-top: -20px;
+	}
+
+	.kc-box p {
+		margin-top: 20px;
+	}
+
+	.kc-box a {
+		bottom: 25px;
 	}
 
 }
