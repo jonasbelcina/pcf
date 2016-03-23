@@ -39,10 +39,10 @@ get_header(); ?>
 														         
 												  //   	//show the image
 												  //   	echo "<p><a href=\"$brochure['url']\"><img src=\"pdfimage/$thumb\" alt=\"\" /></a></p>";
-														$im = new imagick($brochure['url'][0]);
-														$im->setImageFormat('jpg');
-														header('Content-Type: image/jpeg');
-														echo $im; 
+														// $im = new imagick($brochure['url'][0]);
+														// $im->setImageFormat('jpg');
+														// header('Content-Type: image/jpeg');
+														// echo $im; 
 
 													?>
 													<?php $brochure = get_sub_field('brochure'); ?>
