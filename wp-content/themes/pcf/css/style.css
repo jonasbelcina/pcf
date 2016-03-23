@@ -3280,6 +3280,16 @@ button.alm-load-more-btn:focus {
 		color: #fff;
 	}
 
+/*
+* Brands
+*/
+
+.download-brand img {
+	max-width: 100%;
+	height: 252px;
+	object-fit: cover;
+}
+
 
 /*
 *  Media Queries
@@ -3443,6 +3453,10 @@ button.alm-load-more-btn:focus {
 	.kc-box p {
 		margin-top: 15px;
 		font-size: 19px;
+	}
+
+	.download-brand img {
+		height: 202px;
 	}
 
 }
@@ -3710,6 +3724,10 @@ button.alm-load-more-btn:focus {
 		margin-top: 30px;
 	}
 
+	.download-brand img {
+		height: 147px;
+	}
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -3925,6 +3943,10 @@ button.alm-load-more-btn:focus {
 
 	.modal-dialog {
 		margin: 10px auto;
+	}
+
+	.download-brand img {
+		height: 300px;
 	}
 
 }
