@@ -623,7 +623,23 @@ function disqus_embed($disqus_shortname) {
     </script>';
 }
 
-
+// Creates Brands Custom Post Type
+function pcf_brands_init() {
+    $args = array(
+      	'label' => 'Brands',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'query_var' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail',)
+        );
+    register_post_type( 'brands', $args );
+}
+add_action( 'init', 'pcf_brands_init' );
 
 
 
