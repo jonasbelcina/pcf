@@ -102,7 +102,7 @@
 	  	</div>
 	</div>
 
-<?php if(is_page('413')) : ?>
+<?php if(is_page('413') || is_page('787')) : ?>
 	<script type="text/javascript">
 		function link_to_brochure(link, filename) {
 		    // alert(link);

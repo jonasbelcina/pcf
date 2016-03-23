@@ -33,18 +33,7 @@ get_header(); ?>
 										<?php while( have_rows('brochures') ): the_row(); ?>
 											<div class="product col-md-4 col-sm-4 col-xs-6">
 												<a href="" data-toggle="modal" data-target="#download-brochure">
-													<?php
-														// //execute imageMagick's 'convert', setting the color space to RGB and size to 200px wide
-													 //    exec("convert \"{$brochure['url']\" -colorspace RGB -geometry 200 $thumbDirectory$thumb");
-														         
-												  //   	//show the image
-												  //   	echo "<p><a href=\"$brochure['url']\"><img src=\"pdfimage/$thumb\" alt=\"\" /></a></p>";
-														// $im = new imagick($brochure['url'][0]);
-														// $im->setImageFormat('jpg');
-														// header('Content-Type: image/jpeg');
-														// echo $im; 
 
-													?>
 													<?php $brochure = get_sub_field('brochure'); ?>
 													<h3><?php echo $brochure['title']; ?></h3>
 												</a>

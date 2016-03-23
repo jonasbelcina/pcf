@@ -60,7 +60,7 @@ function pcf_scripts() {
 	
 	wp_enqueue_script('pcf-script');
 
-	if(is_page('413')) {
+	if(is_page('413') || is_page('787')) {
 		wp_enqueue_script('pcf-binarytransport');
 		wp_enqueue_script('vendor-binary-transport');
 	}
