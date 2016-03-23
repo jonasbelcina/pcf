@@ -333,4 +333,9 @@
 		);
 	});
 
+	$('.download-brand').on('click', function() {
+		$('.db-holder').removeClass('active-brochure');
+		$(this).next('a').addClass('active-brochure');
+	});
+
 })(jQuery);

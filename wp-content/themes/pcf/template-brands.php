@@ -32,12 +32,14 @@ get_header(); ?>
 									<?php if( have_rows('brochures') ): ?>
 										<?php while( have_rows('brochures') ): the_row(); ?>
 											<div class="product col-md-4 col-sm-4 col-xs-6">
-												<a href="" data-toggle="modal" data-target="#download-brochure">
+												<a class="download-brand" href="" data-toggle="modal" data-target="#download-brochure">
 
 													<?php $brochure = get_sub_field('brochure'); ?>
+													<?php $thumb = get_sub_field('thumbnail'); ?>
+													<img src="<?php echo $thumb['url']; ?>" alt="<?php echo $thumb['alt']; ?>" />
 													<h3><?php echo $brochure['title']; ?></h3>
 												</a>
-												<a class="active-brochure" href="<?php echo $brochure['url']; ?>" dataFilename="<?php echo $brochure['title']; ?>" style="display: none;"></a>
+												<a class="db-holder" href="<?php echo $brochure['url']; ?>" dataFilename="<?php echo $brochure['title']; ?>" style="display: none;"></a>
 											</div>
 										<?php endwhile; ?>
 									<?php endif; ?>
