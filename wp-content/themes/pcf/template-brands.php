@@ -43,6 +43,7 @@ get_header(); ?>
 											</div>
 										<?php endwhile; ?>
 									<?php endif; ?>
+									<div class="clearfix"></div>
 								</div>
 							<?php endwhile;
 						endif;
