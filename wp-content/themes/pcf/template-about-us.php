@@ -59,7 +59,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="our-team about-us">
+<!-- <section class="our-team about-us">
 	<div class="container">
 		<div class="row">
 			<h2><?php the_field('team_heading'); ?></h2>
@@ -73,7 +73,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section class="why-us about-us">
 	<div class="container">
@@ -113,44 +113,21 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="home-certificates">
+<section class="our-clients about-us">
 	<div class="container">
 		<div class="row">
-			<div class="desktop-certificates">
-				<div class="col-md-3 certificates-header">
-					<h2><?php the_field('certificates_heading', 5); ?></h2>
-				</div>
-
-				<?php
-					$cert_images = get_field('certificates_gallery', 5);
-					if($cert_images) :
-						foreach($cert_images as $cert_image) : ?>
-							<div class="col-md-3">
-								<img src="<?php echo $cert_image['url']; ?>" alt="<?php $cert_image['alt']; ?>" />
+			<h2><?php the_field('clients_heading', 5); ?></h2>
+			<?php 
+				$images = get_field('client', 5);
+				if( $images ): ?>
+					<div class="brand-items">
+						<?php foreach( $images as $image ): ?>
+							<div class="brand-item">
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 							</div>
-						<?php endforeach;
-					endif;
-				?>
-			</div>
-
-			<div class="mobile-certificates">
-				<div class="col-sm-4 certificates-header">
-					<h2><?php the_field('certificates_heading', 5); ?></h2>
-				</div>
-
-				<div class="col-sm-8">
-					<?php
-					$cert_images = get_field('certificates_gallery', 5);
-					if($cert_images) :
-						echo '<div class="cert-slider">';
-							foreach($cert_images as $cert_image) : ?>
-								<img src="<?php echo $cert_image['url']; ?>" alt="<?php $cert_image['alt']; ?>" />
-							<?php endforeach;
-						echo '</div>';
-					endif;
-					?>
-				</div>
-			</div>
+						<?php endforeach; ?>
+					</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

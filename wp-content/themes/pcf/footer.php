@@ -71,7 +71,7 @@
 			<div class="container">
 				<div class="row">
 					<span class="copyright">
-						Palmonade copyright 2016
+						PCF copyright 2016
 					</span>
 
 					<span class="heych">
@@ -94,7 +94,7 @@
 	      		</div>
 
 	      		<div class="modal-body">
-	    			<p>Thank you for contacting Palmonade Kitchens.</p>
+	    			<p>Thank you for contacting Palmon Contract Furniture.</p>
 	    			<p>One of our customer service executives will contact you soon.</p>
 	    			<a class="site-continue" href="">Continue to site</a>
 	     	 	</div>
