@@ -338,4 +338,22 @@
 		$(this).next('a').addClass('active-brochure');
 	});
 
+	$('.brands-btn').on('click', function() {
+		var loadmore = 0;
+		var $this = $(this);
+		$('.prod-cat-group').removeClass('active-wrap');
+		$this.closest('.prod-cat-group').addClass('active-wrap');
+		$('.active-wrap .loaded').last().next('.brochure-wrap').addClass('loaded');
+
+		$('.active-wrap .brochure-wrap').each(function() {
+		  	if(!$(this).hasClass('loaded')) {
+		  		loadmore++;
+		  	}
+		});
+
+		if(loadmore == 0) {
+			$this.prop('disabled', true);
+		}
+	});
+
 })(jQuery);

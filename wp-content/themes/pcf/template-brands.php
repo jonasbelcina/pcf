@@ -25,27 +25,38 @@ get_header(); ?>
 
 						$brands_query = new WP_Query($args);
 
-						if($brands_query->have_posts()) :
+						if($brands_query->have_posts()) : 
 							while( $brands_query->have_posts() ) : $brands_query->the_post(); ?>
 								<div class="prod-cat-group" id="<?php echo $post->post_name; ?>">
 									<h2><?php the_title(); ?></h2>
-									<div class="row">
+									<div class="brand-desc">
 										<?php the_content(); ?>
 									</div>
-									<?php if( have_rows('brochures') ): ?>
-										<?php while( have_rows('brochures') ): the_row(); ?>
-											<div class="product col-md-4 col-sm-4 col-xs-6">
-												<a class="download-brand" href="" data-toggle="modal" data-target="#download-brochure">
+									<?php if( have_rows('brochures') ):
+										$count = 0;
+										$last = count(get_field('brochures'));
+										while( have_rows('brochures') ): the_row(); 
+											$count++;
+											if($count % 6 == 1) { ?>
+												<div class="brochure-wrap <?php if($count == 1) echo 'loaded'; ?>"> 
+											<?php } ?>
+													<div class="product col-md-4 col-sm-4 col-xs-6">
+														<a class="download-brand" href="" data-toggle="modal" data-target="#download-brochure">
 
-													<?php $brochure = get_sub_field('brochure'); ?>
-													<?php $thumb = get_sub_field('thumbnail'); ?>
-													<img src="<?php echo $thumb['url']; ?>" alt="<?php echo $thumb['alt']; ?>" />
-													<h3><?php echo $brochure['title']; ?></h3>
-												</a>
-												<a class="db-holder" href="<?php echo $brochure['url']; ?>" dataFilename="<?php echo $brochure['title']; ?>" style="display: none;"></a>
-											</div>
-										<?php endwhile; ?>
-									<?php endif; ?>
+															<?php $brochure = get_sub_field('brochure'); ?>
+															<?php $thumb = get_sub_field('thumbnail'); ?>
+															<img src="<?php echo $thumb['url']; ?>" alt="<?php echo $thumb['alt']; ?>" />
+															<h3><?php echo $brochure['title']; ?></h3>
+														</a>
+														<a class="db-holder" href="<?php echo $brochure['url']; ?>" dataFilename="<?php echo $brochure['title']; ?>" style="display: none;"></a>
+													</div>
+										<?php if($count % 6 == 0 || $count == $last) { echo '</div>'; } 
+										endwhile;
+
+										if($last > 6) {
+											echo '<div class="more-brands"><button class="brands-btn">Load More</button></div>';
+										}
+									endif; ?>
 									<div class="clearfix"></div>
 								</div>
 							<?php endwhile;
