@@ -3343,7 +3343,7 @@ button.alm-load-more-btn:focus {
 
 @media only screen and (max-width : 1199px) {
 	.navbar-default .navbar-nav > li > a {
-		margin: 0 15px;
+		margin: 0 10px;
 	}
 
 	.home-about h2 {
@@ -3508,6 +3508,10 @@ button.alm-load-more-btn:focus {
 }
 
 @media only screen and (max-width : 991px) {
+	.navbar-brand > img {
+		max-width: 250px;
+	}
+
 	.navbar-default .navbar-nav > li > a {
 		font-size: 16px;
 		padding: 15px 5px;
