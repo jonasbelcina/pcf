@@ -904,6 +904,7 @@ header {
 			color: #676666;
 			font-size: 18px;
 			line-height: 28px;
+			min-height: 168px
 		}
 
 		.kc-box {
@@ -3249,6 +3250,18 @@ button.alm-load-more-btn:focus {
 #kitchen_enquiry .modal-dialog,
 #download-brochure .modal-dialog {
 	max-width: 400px;
+}
+
+#download-brochure .modal-dialog {
+	height: 100%;
+}
+
+#download-brochure .modal-content {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+			transform: translateY(-50%);
 }
 
 #kitchen_enquiry h3 {
