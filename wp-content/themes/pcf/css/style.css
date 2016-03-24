@@ -3309,8 +3309,8 @@ button.alm-load-more-btn:focus {
 .download-brand img {
 	width: 100%;
 	height: 252px;
-	object-fit: cover;
-	border: 1px solid #F5F4F4; 
+	object-fit: contain;
+	border: 1px solid #CACACA; 
 }
 
 .more-brands {
