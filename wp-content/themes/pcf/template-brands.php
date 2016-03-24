@@ -29,6 +29,7 @@ get_header(); ?>
 							while( $brands_query->have_posts() ) : $brands_query->the_post(); ?>
 								<div class="prod-cat-group" id="<?php echo $post->post_name; ?>">
 									<h2><?php the_title(); ?></h2>
+									<p><?php the_content(); ?></p>
 									<?php if( have_rows('brochures') ): ?>
 										<?php while( have_rows('brochures') ): the_row(); ?>
 											<div class="product col-md-4 col-sm-4 col-xs-6">
