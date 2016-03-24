@@ -5,7 +5,7 @@
 		$args = array(
 					'post_type' 		=> 'brands',
 					'post_status' 		=> 'publish',
-					'orderby'			=> 'name',
+					// 'orderby'			=> 'name',
 					'order'				=> 'ASC',
 				  	'posts_per_page' 	=> -1,
 				);
