@@ -71,7 +71,7 @@
 			<div class="container">
 				<div class="row">
 					<span class="copyright">
-						PCF copyright 2016
+						Palmon Contract Furniture &copy; 2016
 					</span>
 
 					<span class="heych">
