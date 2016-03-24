@@ -51,6 +51,7 @@
                 		    	<li><a href="<?php echo home_url(); ?>/about-us" <?php if(is_page('141')) { ?>class="current-page"<?php } ?>>About Us</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/services" <?php if(is_page('413')) { ?>class="current-page"<?php } ?>>Services</a></li>
                 		    	<li><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ) ?>" <?php if(is_shop()) { ?>class="current-page"<?php } ?>>Products</a></li>
+                		    	<li><a href="<?php echo home_url(); ?>/brands" <?php if(is_page('787')) { ?>class="current-page"<?php } ?>>Brands</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/news" <?php if(is_home()) { ?>class="current-page"<?php } ?>>News</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/contact-us" <?php if(is_page('115')) { ?>class="current-page"<?php } ?>>Contact Us</a></li>
                 		    </ul>
