@@ -73,7 +73,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 						                    	<div class="image-holder">
 						                    		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-						                    		<span><?php echo strtoupper($prefix) . $ctr; ?></span>
+						                    		<?php
+						                    			$string = $image['title'];
+						                    			$brand = substr($string, 0, strpos($string, '_'));
+						                    			$prod_name = substr($string, strpos($string, "_") + 1); 
+						                    		?>
+						                    		<span><?php echo $brand; ?> - <?php echo $prod_name; ?></span>
+						                    		<!-- <span><?php echo strtoupper($prefix) . $ctr; ?></span> -->
 					                    		</div>
 
 									        <?php $ctr++;
