@@ -147,7 +147,7 @@ get_header(); ?>
 					if($cert_images) :
 						foreach($cert_images as $cert_image) : ?>
 							<div class="col-md-3">
-								<img src="<?php echo $cert_image['url']; ?>" alt="<?php $cert_image['alt']; ?>" />
+								<img class="img-responsive" src="<?php echo $cert_image['url']; ?>" alt="<?php $cert_image['alt']; ?>" />
 							</div>
 						<?php endforeach;
 					endif;

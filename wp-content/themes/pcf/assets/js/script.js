@@ -168,6 +168,10 @@
 			$(this).removeClass('glyphicon-minus');
 			$(this).addClass('glyphicon-plus');
 		} else {
+			$('.top-parent').removeClass('cat-active');
+			$('.expand').removeClass('glyphicon-minus');
+			$('.expand').addClass('glyphicon-plus');
+			$('.woo-sidebar ul ul').css('max-height', '1px');
 			$(this).closest('li').addClass('cat-active');
 			$(this).closest('li').next('ul').css('max-height', '500px');
 			$(this).removeClass('glyphicon-plus');
