@@ -1374,8 +1374,9 @@ header {
 				right: 0;
 			}
 
-	.desktop-certificates .img-responsive {
+	.mobile-certificates .img-responsive {
 			margin: 0 auto;
+			max-height: 109px;
 		}
 
 	.our-clients {
