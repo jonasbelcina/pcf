@@ -75,10 +75,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 						                    		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 						                    		<?php
 						                    			$string = $image['title'];
-						                    			$brand = substr($string, 0, strpos($string, '_'));
-						                    			$prod_name = substr($string, strpos($string, "_") + 1); 
+						                    			if(strpos($string, '_')) :
+						                    				$brand = substr($string, 0, strpos($string, '_'));
+						                    				$prod_name = substr($string, strpos($string, "_") + 1);
+					                    				else :
+					                    					$prod_name = $string; 
+						                    			endif;
+						                    			
 						                    		?>
-						                    		<span><?php echo $brand; ?> - <?php echo $prod_name; ?></span>
+						                    		<span><?php if($brand != '') { echo $brand . ' - '; } ?><?php echo $prod_name; ?></span>
 						                    		<!-- <span><?php echo strtoupper($prefix) . $ctr; ?></span> -->
 					                    		</div>
 
