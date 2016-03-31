@@ -1374,7 +1374,7 @@ header {
 				right: 0;
 			}
 
-	.mobile-certificates .img-responsive {
+	.mobile-certificates .owl-item img {
 			margin: 0 auto;
 			max-height: 109px;
 		}
