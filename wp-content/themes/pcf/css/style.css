@@ -485,9 +485,13 @@ header {
 		margin-left: -72px;
 	}
 
-	.mobile-certificates {
+	.desktop-certificates {
 		display: none;
 	}
+
+	/*.mobile-certificates {
+		display: none;
+	}*/
 
 		.cert-slider .owl-item {
 			overflow: hidden;
